@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flixter</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="js/main.js" defer></script>
+    <style>
+    body{
+        font-family: 'Poppins', sans-serif;
+    }
+    /* poppins-200 - latin */
+    @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 200;
+        src: url('./fonts/poppins-v20-latin-200.eot'); /* IE9 Compat Modes */
+        src: local(''),
+            url('./fonts/poppins-v20-latin-200.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('./fonts/poppins-v20-latin-200.woff2') format('woff2'), /* Super Modern Browsers */
+            url('./fonts/poppins-v20-latin-200.woff') format('woff'), /* Modern Browsers */
+            url('./fonts/poppins-v20-latin-200.ttf') format('truetype'), /* Safari, Android, iOS */
+            url('./fonts/poppins-v20-latin-200.svg#Poppins') format('svg'); /* Legacy iOS */
+    }
+    /* poppins-300 - latin */
+    @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 300;
+        src: url('./fonts/poppins-v20-latin-300.eot'); /* IE9 Compat Modes */
+        src: local(''),
+            url('./fonts/poppins-v20-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('./fonts/poppins-v20-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+            url('./fonts/poppins-v20-latin-300.woff') format('woff'), /* Modern Browsers */
+            url('./fonts/poppins-v20-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+            url('./fonts/poppins-v20-latin-300.svg#Poppins') format('svg'); /* Legacy iOS */
+    }
+    /* poppins-regular - latin */
+    @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        src: url('./fonts/poppins-v20-latin-regular.eot'); /* IE9 Compat Modes */
+        src: local(''),
+            url('./fonts/poppins-v20-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('./fonts/poppins-v20-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+            url('./fonts/poppins-v20-latin-regular.woff') format('woff'), /* Modern Browsers */
+            url('./fonts/poppins-v20-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+            url('./fonts/poppins-v20-latin-regular.svg#Poppins') format('svg'); /* Legacy iOS */
+    }
+    /* poppins-500 - latin */
+    @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        src: url('./fonts/poppins-v20-latin-500.eot'); /* IE9 Compat Modes */
+        src: local(''),
+            url('./fonts/poppins-v20-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('./fonts/poppins-v20-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+            url('./fonts/poppins-v20-latin-500.woff') format('woff'), /* Modern Browsers */
+            url('./fonts/poppins-v20-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+            url('./fonts/poppins-v20-latin-500.svg#Poppins') format('svg'); /* Legacy iOS */
+    }
+    /* poppins-600 - latin */
+    @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        src: url('./fonts/poppins-v20-latin-600.eot'); /* IE9 Compat Modes */
+        src: local(''),
+            url('./fonts/poppins-v20-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('./fonts/poppins-v20-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+            url('./fonts/poppins-v20-latin-600.woff') format('woff'), /* Modern Browsers */
+            url('./fonts/poppins-v20-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+            url('./fonts/poppins-v20-latin-600.svg#Poppins') format('svg'); /* Legacy iOS */
+    }
+    /* poppins-700 - latin */
+    @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        src: url('./fonts/poppins-v20-latin-700.eot'); /* IE9 Compat Modes */
+        src: local(''),
+            url('./fonts/poppins-v20-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('./fonts/poppins-v20-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+            url('./fonts/poppins-v20-latin-700.woff') format('woff'), /* Modern Browsers */
+            url('./fonts/poppins-v20-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+            url('./fonts/poppins-v20-latin-700.svg#Poppins') format('svg'); /* Legacy iOS */
+    }
+    /* poppins-800 - latin */
+    @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 800;
+        src: url('./fonts/poppins-v20-latin-800.eot'); /* IE9 Compat Modes */
+        src: local(''),
+            url('./fonts/poppins-v20-latin-800.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('./fonts/poppins-v20-latin-800.woff2') format('woff2'), /* Super Modern Browsers */
+            url('./fonts/poppins-v20-latin-800.woff') format('woff'), /* Modern Browsers */
+            url('./fonts/poppins-v20-latin-800.ttf') format('truetype'), /* Safari, Android, iOS */
+            url('./fonts/poppins-v20-latin-800.svg#Poppins') format('svg'); /* Legacy iOS */
+    }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" style="vertical-align: -0.125em;" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><path fill="#6bedaf" d="M43 39V24h-4v15c0 5 4 9 9 9v-4c-2.8 0-5-2.2-5-5z"/><circle cx="24" cy="24" r="19" fill="#fff"/><circle cx="24" cy="24" r="2" fill="#041a26"/><g fill="#041a26"><circle cx="24" cy="14" r="5"/><circle cx="24" cy="34" r="5"/><circle cx="34" cy="24" r="5"/><circle cx="14" cy="24" r="5"/></g></svg>Flixster
+            </h1>
+        </div>
+        
+        <nav>
+            <ul>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" style="vertical-align: -0.125em;" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 19v-8.5a1 1 0 0 0-.4-.8l-7-5.25a1 1 0 0 0-1.2 0l-7 5.25a1 1 0 0 0-.4.8V19a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1z"/></svg>
+                    <a href="">Home</a>
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" style="vertical-align: -0.125em;" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M18.26 3H5.74A2.74 2.74 0 0 0 3 5.74v12.52A2.74 2.74 0 0 0 5.74 21h12.52A2.74 2.74 0 0 0 21 18.26V5.74A2.74 2.74 0 0 0 18.26 3ZM7 11H5V9h2Zm-2 2h2v2H5Zm4-8h6v14H9Zm10 6h-2V9h2Zm-2 2h2v2h-2Zm2-7.26V7h-2V5h1.26a.74.74 0 0 1 .74.74ZM5.74 5H7v2H5V5.74A.74.74 0 0 1 5.74 5ZM5 18.26V17h2v2H5.74a.74.74 0 0 1-.74-.74Zm14 0a.74.74 0 0 1-.74.74H17v-2h2Z"/></svg>
+                    <a href="">Movies</a>
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" style="vertical-align: -0.125em;" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M20 6h-5.586l2.293-2.293l-1.414-1.414L12 5.586L8.707 2.293L7.293 3.707L9.586 6H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V8c0-1.103-.897-2-2-2zM4 19V8h16l.002 11H4z"/></svg>
+                    <a href="">TV Shows</a>
+                </li>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" style="vertical-align: -0.125em;" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path fill="currentColor" d="M16 8a5 5 0 1 0 5 5a5 5 0 0 0-5-5Z"/><path fill="currentColor" d="M16 2a14 14 0 1 0 14 14A14.016 14.016 0 0 0 16 2Zm7.992 22.926A5.002 5.002 0 0 0 19 20h-6a5.002 5.002 0 0 0-4.992 4.926a12 12 0 1 1 15.985 0Z"/></svg>
+                    <a href="">Account</a>
+                </li>
+            </ul>
+        </nav>
+
+        <form method="post" id="search-bar">
+            <input type="text" name="search" id="search-input" placeholder="Search...">
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" style="vertical-align: -0.125em;" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path fill="currentColor" d="M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1c-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0 0 11.6 0l43.6-43.5a8.2 8.2 0 0 0 0-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z"/></svg>
+        </form>
+    </header>
+</body>
+</html>
