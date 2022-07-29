@@ -1,6 +1,6 @@
 *{
-    padding: 0;
-    margin: 0;
+    margin:0;
+    padding:0;
     box-sizing: border-box;
 }
 
@@ -8,113 +8,148 @@
     --primary:#041a26;
     --secondary:#182c37;
     --cta:#6bedaf;
-    --button-text: #fff;
-    --text-color:#ffffff;
+    --text-primary:#fff;
+    --text-secondary:#d3d3d3;
 }
 
 body{
     font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-    background-color: var(--primary);
 }
 
 header{
+    background-color: var(--secondary);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--secondary) ;
     padding: 10px;
-    gap: 1rem;
+    position: fixed;
+    width: 100%;
 }
 
 .logo{
     color: var(--cta);
 }
 
-.logo h1{
+nav{
     display: flex;
+    gap: 1rem;
+    justify-content: space-between;
     align-items: center;
 }
 
 nav ul{
     display: flex;
+    gap: 1rem;
     list-style: none;
-    gap: 3rem;
 }
 
-nav li{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-nav svg{
-    color: #fff;
-    font-size: 1.5rem;
+nav li:last-child{
     display: none;
 }
 
 nav a{
     text-decoration: none;
-    font-weight: 400;
-    color: #fff;
-    font-size: 1rem;
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: .9rem;
+    text-transform: uppercase;
 }
 
-#search-bar{
-    position: relative;
+
+.material-symbols-outlined {
+    display: none;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 45;
+    
+}
+
+
+.search-bar{
     display: flex;
     align-items: center;
+    position: relative;
+    color: #fff;
 }
 
-#search-bar svg{
-    position: absolute;
-    font-size: 1.5rem;
-    color: #d3d3d3;
-    left: 10px;
-}
-
-#search-input{
-    background-color: var(--primary);
-    color: var(--button-text);
-    padding: 10px 20px 10px 35px;
-    border: 2px solid var(--primary);
+.search-bar input{
+    padding: 10px 25px;
     border-radius: 50px;
+    background-color: var(--primary);
+    border: 2px solid var(--primary);
     font-family: inherit;
+    color: var(--text-primary);
     transition: border .3s;
-    width: 100%;
 }
 
-#search-input:focus{
+.search-bar input:focus{
     border: 2px solid var(--cta);
     outline: none;
 }
 
-#search-input::placeholder{
+.search-bar svg{
+    position: absolute;
+    left: 10px;
     color: #d3d3d3;
 }
 
+::placeholder{
+    color: var(--text-secondary);
+}
 
-
-@media only screen and (max-width:920px){
-    nav{
-        position: fixed;
-        background-color: var(--secondary);
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        padding: 10px;
+@media only screen and (max-width:720px) {
+    header{
+        padding: 5px;
     }
 
-    nav svg{
-        display: block;
+    nav{
+        position: fixed;
+        width: 100%;
+        background-color: var(--secondary);
+        bottom: 0;
+        padding: 10px 0;
+        border-radius: 20px 20px 0 0;
+        left: 0;
     }
 
     nav ul{
+        width: 100%;
+        display: flex;
         justify-content: space-evenly;
     }
 
     nav a{
         font-size: .8rem;
+    }
+
+    .material-symbols-outlined {
+        display: block;  
+    }
+    
+
+    nav li:last-child{
+        display: block;
+    }
+
+    .search-bar{
+        display: none;
+    }
+
+    .active{
+        background-color: var(--primary);
+        flex-direction: row;
+        padding: 10px;
+        border-radius: 10px;
+        gap: .1rem;
+        color: var(--cta);
+    }
+
+    .active .material-symbols-outlined{
+        font-variation-settings:
+    'FILL' 1
     }
 }
